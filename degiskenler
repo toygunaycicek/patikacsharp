@@ -1,0 +1,74 @@
+using System;
+
+namespace Patika2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("");
+
+            byte b = 1; //1 byte yer kaplar 0-255 arası
+            sbyte sb = 2; //1 byte yer kaplar -128 +127 arası
+
+            short sh = 3; //2 byte yer kaplar -32768+32768 arası
+            ushort ush = 4; //2 byte yer kaplar 0+65365 arası
+
+            Int16 i16 = 5; //2 byte yer kaplar
+            int i = 6; //4 byte yer kaplar -2147483648+ arası
+            Int32 i32 = 7; //4 byte yer kaplar -2147483648+ arası
+            Int64 i64 = 8; //8 byte yer kaplar
+            uint u = 9; //4 byte yer kaplar
+
+            long l = 10; //8 byte yer kaplar
+            ulong ul = 11; //8 byte yer kaplar, long'un + karşılığı
+
+            //reel sayılar
+            float f = 12; //4 byte yer kaplar
+
+            double d = 13; //8 byte yer kaplar
+
+            decimal dec = 14; //16 byte yer kaplar
+
+            char ch = '5'; //2 byte yer kaplar
+            string st = "16"; //sınırsız
+
+            bool b1 = true;
+            bool b2 = false;
+
+            DateTime dt = DateTime.Now;
+            Console.WriteLine(dt);
+
+            object o1 = "x";
+            object o2 = "y";
+            object o3 = 4;
+            object o4 = 5.2;
+
+            string str = "";
+            string str1 = string.Empty;
+            str1 = "Toygun";
+
+            int i1 = 3;
+            int i2 = 4;
+            int i3 = i1 * i2;
+
+            bool bo1 = 10 > 2;
+
+            //Dönüşümler
+            string str2 = "20";
+            int i4 = 25;
+
+            string yenideger = str2 + i4.ToString();
+            Console.WriteLine(yenideger); // çıktı 2025
+
+            int i5 = i4 + Convert.ToInt32(str2);
+            Console.WriteLine(i5); // çıktı 45
+
+            int i6 = i4 + int.Parse(str2);
+            Console.WriteLine(i6); // çıktı 45
+
+            string date = DateTime.Now.ToString("dd/MM/yyyy");
+            Console.WriteLine(date);
+        }
+    }
+}
