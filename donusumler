@@ -1,0 +1,72 @@
+using System;
+
+namespace Tip_Dönüşümleri
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Implicit conversion (bilinçsiz)
+            byte a = 4;
+            sbyte b = 30;
+            short c = 20;
+
+            int d = a + b + c;
+            Console.WriteLine("d:" + d);
+
+            long l = d;
+            Console.WriteLine("l:" + l);
+
+            float f = l;
+            Console.WriteLine("f:" + f);
+
+            string s = "toygun";
+            char ch = 't';
+            object ob = s + ch + d;
+            Console.WriteLine("ob:" + ob);
+
+            //Explicit conversion (bilinçli)
+            int x = 5;
+            byte by = (byte)x;
+            Console.WriteLine("by:" + by);
+
+            float w = 10.4f;
+            byte e = (byte)w;
+            Console.WriteLine("e:" + e);
+
+            //Tostring
+            int xx = 3;
+            string st = xx.ToString();
+            Console.WriteLine("st:" + st);
+
+            string fl = 12.4f.ToString();
+            Console.WriteLine(fl);
+
+            //System.Convert
+            string s1 = "10", s2 = "20";
+            int sayi1, sayi2, Toplam;
+            
+            sayi1 = Convert.ToInt32(s1);
+            sayi2 = Convert.ToInt32(s2);
+
+            Toplam = sayi1 + sayi2;
+            Console.WriteLine("Toplam:" + Toplam);
+        }
+
+        //Parse
+        public static void ParseMethod()
+        {
+            string metin1 = "10";
+            string metin2 = "10.20";
+            int rakam1;
+            double double1;
+
+            rakam1 = Int32.Parse(metin1);
+            double1 = Double.Parse(metin2);
+
+            Console.WriteLine("rakam1" + rakam1);
+            Console.WriteLine("doble1" + double1);
+
+        }
+    }
+}
