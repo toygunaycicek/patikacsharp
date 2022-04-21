@@ -1,0 +1,34 @@
+using System;
+
+namespace Mantıksal_hatalar
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.WriteLine("Bir sayı girin");
+                int sayi = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Girdiğiniz sayı: " + sayi);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hata: " + ex.Message.ToString());
+            }
+            finally 
+            {
+                Console.WriteLine("İşlem tamam");
+            }
+            try 
+            {
+                int sayi2 = int.Parse(null);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Boş değer girildi");
+                Console.WriteLine(ex);
+            }
+        }
+    }
+}
