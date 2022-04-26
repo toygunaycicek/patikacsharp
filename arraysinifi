@@ -1,0 +1,40 @@
+using System;
+
+namespace arraysınıfı
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Sort -> sıralama yapar
+
+            int[] sayıDizisi = { 6, 95, 84, 645, 2489, 468, 2, 0, 974 };
+            Array.Sort(sayıDizisi);
+            foreach (var sayi in sayıDizisi) 
+                Console.WriteLine(sayi);
+
+            //Clear -> 
+            Console.WriteLine("***ArrayClear***");
+            Array.Clear(sayıDizisi, 2, 3);
+            foreach (var sayi in sayıDizisi)
+                Console.WriteLine(sayi);
+
+            //Reverse -> 
+            Console.WriteLine("***ArrayReverse***");
+            Array.Reverse(sayıDizisi);
+            foreach (var sayi in sayıDizisi)
+                Console.WriteLine(sayi);
+
+            //IndexOf ->
+            Console.WriteLine("***ArrayIndexOf***");
+            Console.WriteLine(Array.IndexOf(sayıDizisi, 468));
+
+            //Resize ->
+            Console.WriteLine("***ArrayResize***");
+            Array.Resize<int>(ref sayıDizisi, 10);
+            sayıDizisi[8] = 99;
+            foreach (var sayi in sayıDizisi)
+                Console.WriteLine(sayi);
+        }
+    }
+}
